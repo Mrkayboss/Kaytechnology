@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>KayTechnologies</title>
+<link rel="stylesheet" href="css/styles.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <div class="nav-logo" onclick="goTo('home')">
+      <svg viewBox="0 0 36 36" fill="none" width="34">
+        <polygon points="18,3 33,11 33,25 18,33 3,25 3,11" stroke="#00bcff" stroke-width="2" fill="rgba(0,188,255,0.08)"/>
+        <text x="18" y="23" text-anchor="middle" fill="#00bcff" font-size="13" font-weight="700" font-family="Rajdhani">KT</text>
+      </svg>
+      <span class="nav-logo-text">Kay<span>Technologies</span></span>
+    </div>
+    <nav class="nav-links">
+      <button class="nav-link active" id="nav-home"     onclick="goTo('home')">Home</button>
+      <button class="nav-link"        id="nav-about"    onclick="goTo('about')">About</button>
+      <button class="nav-link"        id="nav-services" onclick="goTo('services')">Services</button>
+      <button class="nav-link"        id="nav-portfolio"onclick="goTo('portfolio')">Portfolio</button>
+      <button class="nav-link"        id="nav-contact"  onclick="goTo('contact')">Contact</button>
+    </nav>
+    <button class="btn btn-primary navbar-cta" onclick="goTo('contact')">Get Started</button>
+    <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-link active" id="mnav-home"     onclick="goTo('home');closeMenu()">Home</button>
+    <button class="mobile-link"        id="mnav-about"    onclick="goTo('about');closeMenu()">About</button>
+    <button class="mobile-link"        id="mnav-services" onclick="goTo('services');closeMenu()">Services</button>
+    <button class="mobile-link"        id="mnav-portfolio"onclick="goTo('portfolio');closeMenu()">Portfolio</button>
+    <button class="mobile-link"        id="mnav-contact"  onclick="goTo('contact');closeMenu()">Contact</button>
+    <button class="btn btn-primary" style="margin-top:8px" onclick="goTo('contact');closeMenu()">Get Started</button>
+  </div>
+</header>
+
+<!-- ══ HOME PAGE ══════════════════════════════ -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow1"></div>
+    <div class="hero-glow2"></div>
+    <div class="container hero-inner">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div class="hero-badge"><span class="badge-dot"></span>Uganda's Premier Tech Company</div>
+        <div class="hero-title">
+          <span class="hero-title-main">KayTechnologies</span>
+          <span class="hero-title-sub">Innovating Through <span class="hero-rotating" id="rotating-word">Technology</span></span>
+        </div>
+        <p class="hero-desc">We craft powerful digital experiences — from blazing-fast websites to enterprise systems — helping businesses across Uganda and Africa scale confidently in the digital era.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="goTo('services')">Explore Services →</button>
+          <button class="btn btn-outline" onclick="goTo('contact')">Contact Us</button>
+        </div>
+      </div>
+      <div class="hero-orb">
+        <div class="orb-ring orb-ring-1"></div>
+        <div class="orb-ring orb-ring-2"></div>
+        <div class="orb-ring orb-ring-3"></div>
+        <div class="orb-core">
+          <svg viewBox="0 0 80 80" fill="none" width="80">
+            <polygon points="40,6 72,22 72,58 40,74 8,58 8,22" stroke="#00bcff" stroke-width="2" fill="rgba(0,188,255,0.06)"/>
+            <text x="40" y="48" text-anchor="middle" fill="#00bcff" font-size="22" font-weight="700" font-family="Rajdhani">KT</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-ind"><span>Scroll</span><div class="scroll-line"></div></div>
+  </section>
+
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item"><span class="stat-value">150+</span><span class="stat-label">Projects Delivered</span></div>
+        <div class="stat-item"><span class="stat-value">80+</span><span class="stat-label">Happy Clients</span></div>
+        <div class="stat-item"><span class="stat-value">8+</span><span class="stat-label">Years Experience</span></div>
+        <div class="stat-item"><span class="stat-value">24/7</span><span class="stat-label">Support</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title">Our Core <span class="highlight">Services</span></h2>
+        <p class="section-subtitle">End-to-end technology solutions tailored to your business needs.</p>
+      </div> K 
+      <div class="services-home-grid">
+        <div class="card"><div class="service-card-icon"><img src="assets/images/web icon.jpg" alt="Web Development" style="width:100%;height:auto;border-radius:8px;"></div><h3 class="service-card-title">Web Development</h3><p class="service-card-desc">Modern, responsive websites built with React, HTML5, CSS3 and cutting-edge frameworks.</p></div>
+        <div class="card"><div class="service-card-icon"><img src="assets/images/mobile app.jpg" alt="Mobile App Development" style="width:100%;height:auto;border-radius:8px;"></div><h3 class="service-card-title">Mobile App Development</h3><p class="service-card-desc">Powerful native and cross-platform apps for Android & iOS that delight users.</p></div>
+        <div class="card"><div class="service-card-icon"><img src="assets/images/cybersecurity.jpg" alt="Cybersecurity" style="width:100%;height:auto;border-radius:8px;"></div><h3 class="service-card-title">Cybersecurity</h3><p class="service-card-desc">Enterprise-grade security audits and solutions protecting your digital assets 24/7.</p></div>
+        <div class="card"><div class="service-card-icon"><img src="assets/images/cloud computing.jpg" alt="Cloud Computing" style="width:100%;height:auto;border-radius:8px;"></div><h3 class="service-card-title">Cloud Computing</h3><p class="service-card-desc">Scalable cloud infrastructure on AWS, GCP, and Azure for your growing business.</p></div>
+      </div>
+      <div class="services-cta">
+        <button class="btn btn-outline" onclick="goTo('services')">View All 8 Services →</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-section">
+    <div class="why-section-bg"></div>
+    <div class="container why-inner">
+      <div class="why-text">
+        <span class="section-tag">Why KayTechnologies</span>
+        <h2 class="section-title" style="text-align:left;margin:12px 0 18px">The Right Partner for Your <span class="highlight">Digital Journey</span></h2>
+        <p>We combine world-class technical expertise with deep understanding of the African market. Our team of engineers, designers, and strategists is committed to delivering solutions that work — on time, on budget, and built to last.</p>
+        <button class="btn btn-primary" style="margin-top:20px" onclick="goTo('about')">Learn About Us →</button>
+      </div>
+      <div class="why-points">
+        <div class="card why-point"><span class="why-point-icon"><img src="assets/images/Fast Delivery.jpg" alt="Fast Delivery"></span><div><div class="why-point-title">Fast Delivery</div><div class="why-point-text">Agile processes keep projects on track without sacrificing quality.</div></div></div>
+        <div class="card why-point"><span class="why-point-icon"><img src="assets/images/Tailored services.jpg" alt="Tailored Solutions"></span><div><div class="why-point-title">Tailored Solutions</div><div class="why-point-text">Every product is custom-built for your specific goals.</div></div></div>
+        <div class="card why-point"><span class="why-point-icon"><img src="assets/images/secure.jpg" alt="Secure by Default"></span><div><div class="why-point-title">Secure by Default</div><div class="why-point-text">Security is baked into every layer of our development.</div></div></div>
+        <div class="card why-point"><span class="why-point-icon"><img src="assets/images/on going support.jpg" alt="Ongoing Support"></span><div><div class="why-point-title">Ongoing Support</div><div class="why-point-text">24/7 post-launch support so you're never left stranded.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 class="cta-banner-title">Ready to Build Something <span class="highlight">Amazing?</span></h2>
+        <p class="cta-banner-sub">Let's turn your idea into a powerful digital product. Get a free consultation today.</p>
+        <div class="hero-cta" style="justify-content:center">
+          <button class="btn btn-primary" onclick="goTo('contact')">Get Started Free</button>
+          <button class="btn btn-outline" onclick="goTo('portfolio')">See Our Work</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ ABOUT PAGE ══════════════════════════════ -->
+<div class="page" id="page-about">
+  <section class="page-hero"><div class="page-hero-glow"></div>
+    <div class="container page-hero-content">
+      <span class="section-tag">Who We Are</span>
+      <h1 class="section-title">About <span class="highlight">KayTechnologies</span></h1>
+      <p class="section-subtitle">Uganda's leading technology company, building the digital future one solution at a time.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-story-inner">
+        <div class="about-story-text">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title" style="text-align:left;margin:14px 0 16px">Built by Passion,<br><span class="highlight">Driven by Purpose</span></h2>
+          <p>Founded in Kampala, Uganda, KayTechnologies began as a bold vision  to bridge the technology gap in Africa by delivering world-class digital solutions locally. What started as a small team of passionate engineers has grown into a full-service technology powerhouse.</p>
+          <p>Over the years, we've partnered with startups, SMEs, government bodies, and large enterprises across Uganda and the broader East African region, transforming their ideas into impactful digital products.</p>
+          <p>Today, KayTechnologies is synonymous with innovation, reliability, and excellence in the African tech landscape.</p>
+          <button class="btn btn-primary" style="margin-top:14px" onclick="goTo('contact')">Work With Us →</button>
+        </div>
+        <div class="card" style="display:flex;flex-direction:column;align-items:center;gap:22px;padding:36px">
+          <div class="about-logo-visual">
+            <svg viewBox="0 0 120 120" fill="none" width="150">
+              <polygon points="60,10 105,32 105,88 60,110 15,88 15,32" stroke="#00bcff" stroke-width="2.5" fill="rgba(0,188,255,0.06)"/>
+              <polygon points="60,28 90,44 90,76 60,92 30,76 30,44" stroke="rgba(0,188,255,0.3)" stroke-width="1.5" fill="rgba(0,188,255,0.03)"/>
+              <text x="60" y="72" text-anchor="middle" fill="#00bcff" font-size="32" font-weight="700" font-family="Rajdhani">KT</text>
+            </svg>
+          </div>
+          <div class="about-stats-row">
+            <div class="about-stat"><span class="about-stat-val">2016</span><span class="about-stat-lbl">Founded</span></div>
+            <div class="about-stat"><span class="about-stat-val">150+</span><span class="about-stat-lbl">Projects</span></div>
+            <div class="about-stat"><span class="about-stat-val">20+</span><span class="about-stat-lbl">Team</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="mv-grid">
+        <div class="card mv-card"><div class="mv-card-icon">🎯</div><h3 class="mv-card-heading">Our Mission</h3><p>To empower businesses and individuals across Africa with innovative, reliable, and affordable technology solutions that drive real-world impact.</p></div>
+        <div class="card mv-card" style="border-color:rgba(0,255,170,0.2)"><div class="mv-card-icon">🌟</div><h3 class="mv-card-heading">Our Vision</h3><p>To be Africa's most trusted technology partner by 2030 — known for cutting-edge solutions that transform industries and put African innovation on the global map.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Core Values</span><h2 class="section-title">What We <span class="highlight">Stand For</span></h2></div>
+      <div class="values-grid">
+        <div class="card"><div class="value-icon">🚀</div><div class="value-title">Innovation First</div><p class="value-text">We stay ahead of the curve, adopting emerging technologies to give clients a competitive edge.</p></div>
+        <div class="card"><div class="value-icon">🎯</div><div class="value-title">Client-Centric</div><p class="value-text">Your success is our success. Every decision is driven by your goals and desired outcomes.</p></div>
+        <div class="card"><div class="value-icon">💡</div><div class="value-title">Creative Thinking</div><p class="value-text">We approach every challenge with fresh eyes, crafting elegant solutions to complex problems.</p></div>
+        <div class="card"><div class="value-icon">🛡️</div><div class="value-title">Integrity</div><p class="value-text">We operate with full transparency, honesty, and accountability in every engagement.</p></div>
+        <div class="card"><div class="value-icon">🌍</div><div class="value-title">African Pride</div><p class="value-text">Built in Uganda. Serving Africa. Competing Globally. We are proof of African excellence.</p></div>
+        <div class="card"><div class="value-icon">⚡</div><div class="value-title">Speed & Quality</div><p class="value-text">Agile by nature — we deliver fast without ever compromising on standards or reliability.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">The Team</span><h2 class="section-title">Meet the <span class="highlight">Experts</span></h2></div>
+      <div class="team-grid">
+        <div class="card team-card"><div class="team-avatar"><img src="assets/images/CEO.jpeg" alt="Okello Paul Nicholas" /></div><div class="team-name">Okello Paul Nicholas</div><span class="team-role">CEO & Founder</span></div>
+        <div class="card team-card"><div class="team-avatar"><img src="assets/images/arnold.jpeg" alt="Arnold IT Lead" /></div><div class="team-name">Arnold IT</div><span class="team-role">Lead Developer</span></div>
+        <div class="card team-card"><div class="team-avatar"><img src="assets/images/obore.jpg" alt="Obore Kelly Elijah" /></div><div class="team-name">Obore Kelly Elijah</div><span class="team-role">UX/UI Lead</span></div>
+        <div class="card team-card"><div class="team-avatar"><img src="assets/images/deo.jpg" alt="Deogracious Otim" /></div><div class="team-name">Deogracious Otim </div><span class="team-role">Cybersecurity Expert</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ SERVICES PAGE ══════════════════════════ -->
+<div class="page" id="page-services">
+  <section class="page-hero"><div class="page-hero-glow"></div>
+    <div class="container page-hero-content">
+      <span class="section-tag">What We Offer</span>
+      <h1 class="section-title">Our <span class="highlight">Services</span></h1>
+      <p class="section-subtitle">End-to-end technology solutions crafted to help your business thrive in the digital age.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="services-full-grid">
+        <div class="card"><div class="service-card-icon"><img src="../image/web-development.jpg" alt="Web Development" style="width:100%;height:auto;border-radius:8px;"></div><h3 class="service-card-title">Web Development</h3><p class="service-card-desc">We build blazing-fast, fully responsive websites using React, Next.js, and more.</p><ul class="service-features"><li><span class="feature-dot"></span>Custom website design</li><li><span class="feature-dot"></span>React / Next.js apps</li><li><span class="feature-dot"></span>CMS integration</li><li><span class="feature-dot"></span>SEO optimization</li></ul></div>
+        <div class="card"><div class="service-card-icon">📱</div><h3 class="service-card-title">Mobile App Development</h3><p class="service-card-desc">Native and cross-platform mobile apps for Android and iOS.</p><ul class="service-features"><li><span class="feature-dot"></span>Android & iOS apps</li><li><span class="feature-dot"></span>React Native / Flutter</li><li><span class="feature-dot"></span>App Store deployment</li><li><span class="feature-dot"></span>Push notifications</li></ul></div>
+        <div class="card"><div class="service-card-icon">🛒</div><h3 class="service-card-title">E-commerce Development</h3><p class="service-card-desc">Fully featured online stores with secure payment integrations.</p><ul class="service-features"><li><span class="feature-dot"></span>Shopify / WooCommerce</li><li><span class="feature-dot"></span>Mobile money (MTN/Airtel)</li><li><span class="feature-dot"></span>Product management</li><li><span class="feature-dot"></span>Analytics dashboard</li></ul></div>
+        <div class="card"><div class="service-card-icon">🔐</div><h3 class="service-card-title">Cybersecurity Solutions</h3><p class="service-card-desc">Protect your business with comprehensive security audits and monitoring.</p><ul class="service-features"><li><span class="feature-dot"></span>Security audits</li><li><span class="feature-dot"></span>Penetration testing</li><li><span class="feature-dot"></span>Firewall & VPN setup</li><li><span class="feature-dot"></span>Employee training</li></ul></div>
+        <div class="card"><div class="service-card-icon">☁️</div><h3 class="service-card-title">Cloud Computing</h3><p class="service-card-desc">Migrate and manage your infrastructure on AWS, GCP, and Azure.</p><ul class="service-features"><li><span class="feature-dot"></span>Cloud migration</li><li><span class="feature-dot"></span>AWS / GCP / Azure</li><li><span class="feature-dot"></span>Auto-scaling setup</li><li><span class="feature-dot"></span>Cost optimization</li></ul></div>
+        <div class="card"><div class="service-card-icon">🖥️</div><h3 class="service-card-title">IT Support & Maintenance</h3><p class="service-card-desc">Round-the-clock technical support and network management.</p><ul class="service-features"><li><span class="feature-dot"></span>24/7 helpdesk</li><li><span class="feature-dot"></span>Network setup</li><li><span class="feature-dot"></span>Hardware repair</li><li><span class="feature-dot"></span>Backup solutions</li></ul></div>
+        <div class="card"><div class="service-card-icon">🎨</div><h3 class="service-card-title">UI/UX Design</h3><p class="service-card-desc">Beautiful, intuitive interfaces designed with users at the center.</p><ul class="service-features"><li><span class="feature-dot"></span>User research</li><li><span class="feature-dot"></span>Wireframing & prototyping</li><li><span class="feature-dot"></span>Figma design</li><li><span class="feature-dot"></span>Design systems</li></ul></div>
+        <div class="card"><div class="service-card-icon">📊</div><h3 class="service-card-title">Software Development</h3><p class="service-card-desc">Custom enterprise software: ERP, school systems, hospital systems, and more.</p><ul class="service-features"><li><span class="feature-dot"></span>ERP systems</li><li><span class="feature-dot"></span>School management</li><li><span class="feature-dot"></span>Hospital systems</li><li><span class="feature-dot"></span>Custom SaaS products</li></ul></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">How We Work</span><h2 class="section-title">Our <span class="highlight">Process</span></h2></div>
+      <div class="process-grid">
+        <div class="card process-card"><div class="process-step-num">01</div><div class="process-step-title">Discovery</div><p class="process-step-text">We learn your goals, users, and constraints through deep discovery sessions.</p></div>
+        <div class="card process-card"><div class="process-step-num">02</div><div class="process-step-title">Design</div><p class="process-step-text">Our designers craft user-centered wireframes and high-fidelity prototypes.</p></div>
+        <div class="card process-card"><div class="process-step-num">03</div><div class="process-step-title">Development</div><p class="process-step-text">Engineers build your product using best practices and clean, maintainable code.</p></div>
+        <div class="card process-card"><div class="process-step-num">04</div><div class="process-step-title">Launch & Support</div><p class="process-step-text">We deploy, monitor, and provide ongoing support post-launch.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;text-align:center">
+    <div class="container">
+      <span class="section-tag">Ready?</span>
+      <h2 class="section-title" style="margin-top:12px;margin-bottom:12px">Let's Build Something <span class="highlight">Great</span></h2>
+      <p class="section-subtitle" style="margin-bottom:32px">Get in touch for a free consultation and project quote.</p>
+      <button class="btn btn-primary" onclick="goTo('contact')">Request a Quote →</button>
+    </div>
+  </section>
+</div>
+
+<!-- ══ PORTFOLIO PAGE ═════════════════════════ -->
+<div class="page" id="page-portfolio">
+  <section class="page-hero"><div class="page-hero-glow"></div>
+    <div class="container page-hero-content">
+      <span class="section-tag">Our Work</span>
+      <h1 class="section-title">Projects &amp; <span class="highlight">Portfolio</span></h1>
+      <p class="section-subtitle">A showcase of real-world solutions we've built for clients across Uganda and East Africa.</p>
+    </div>
+  </section>
+  <div class="container portfolio-filters" id="portfolio-filters"></div>
+  <section class="section">
+    <div class="container">
+      <div class="portfolio-grid" id="portfolio-grid"></div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="card portfolio-cta-box">
+        <h2 class="section-title">Have a Project in <span class="highlight">Mind?</span></h2>
+        <p style="color:var(--text-secondary);margin-bottom:28px">Let's add your success story to our portfolio. Get in touch today.</p>
+        <button class="btn btn-primary" onclick="goTo('contact')">Start Your Project →</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ CONTACT PAGE ═══════════════════════════ -->
+<div class="page" id="page-contact">
+  <section class="page-hero"><div class="page-hero-glow"></div>
+    <div class="container page-hero-content">
+      <span class="section-tag">Get In Touch</span>
+      <h1 class="section-title">Contact <span class="highlight">Us</span></h1>
+      <p class="section-subtitle">Ready to start your project? We'd love to hear from you.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="contact-inner">
+        <div>
+          <h2 class="contact-info-heading">Let's Talk</h2>
+          <p class="contact-info-sub">Whether you have a project in mind, need a quote, or just want to say hello  our team is here to help.</p>
+          <div class="contact-items">
+            <div class="contact-item"><div class="contact-item-icon">📍</div><div><span class="contact-item-label">Address</span><span class="contact-item-value">Plot 45, Kampala Road, Kampala, Uganda</span></div></div>
+            <div class="contact-item"><div class="contact-item-icon">📞</div><div><span class="contact-item-label">Phone</span><span class="contact-item-value"><a href="tel:0760964208">0760964208 / 0759877631</a></span></div></div>
+            <div class="contact-item"><div class="contact-item-icon">✉️</div><div><span class="contact-item-label">Email</span><span class="contact-item-value"><a href="mailto:okellopaulnicholas95@gmail.com">okellopaulnicholas95@gmail.com</a></span></div></div>
+            <div class="contact-item"><div class="contact-item-icon">🕐</div><div><span class="contact-item-label">Hours</span><span class="contact-item-value">Mon – Fri: 8:00 AM – 6:00 PM EAT</span></div></div>
+          </div>
+          <div class="contact-map-wrap">
+            <iframe title="KayTechnologies Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63836.27767888395!2d32.56607!3d0.31628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbc0f90a43ab5%3A0xb682b4a7c8945f4a!2sKampala%2C%20Uganda!5e0!3m2!1sen!2sug!4v1690000000000" width="100%" height="200" style="border:0;border-radius:var(--radius-md);filter:invert(90%) hue-rotate(180deg)" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="card contact-form-wrap">
+          <h3 class="contact-form-heading">Send Us a Message</h3>
+          <div id="form-area">
+            <form style="display:flex;flex-direction:column;gap:18px" onsubmit="submitForm(event)">
+              <div class="form-row">
+                <div class="form-field"><label>Full Name *</label><input type="text" placeholder="John Doe" required /></div>
+                <div class="form-field"><label>Email Address *</label><input type="email" placeholder="okellopaulnicholas95@gmail.com" required /></div>
+              </div>
+              <div class="form-row">
+                <div class="form-field"><label>Phone Number</label><input type="tel" placeholder="+256 7XX XXX XXX" /></div>
+                <div class="form-field"><label>Service Interested In</label>
+                  <select>
+                    <option value="">Select a service…</option>
+                    <option>Web Development</option><option>Mobile App Development</option>
+                    <option>E-commerce</option><option>Cybersecurity</option>
+                    <option>Cloud Computing</option><option>IT Support</option>
+                    <option>UI/UX Design</option><option>Software / ERP</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-field"><label>Your Message *</label><textarea placeholder="Tell us about your project, goals, and timeline…" required></textarea></div>
+              <button type="submit" class="btn btn-primary form-submit" id="submit-btn">Send Message →</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="neon-divider"></div>
+  <div class="footer-inner container">
+    <div class="footer-brand">
+      <div class="footer-logo" onclick="goTo('home')">
+        <svg viewBox="0 0 36 36" fill="none" width="34"><polygon points="18,3 33,11 33,25 18,33 3,25 3,11" stroke="#00bcff" stroke-width="2" fill="rgba(0,188,255,0.08)"/><text x="18" y="23" text-anchor="middle" fill="#00bcff" font-size="13" font-weight="700" font-family="Rajdhani">KT</text></svg>
+        <span class="footer-logo-text">Kay<em>Technologies</em></span>
+      </div>
+      <p class="footer-tagline">Innovating the Future Through Technology. Proudly serving Uganda and beyond.</p>
+      <div class="footer-social">
+        <a href="#" class="footer-social-link">f</a>
+        <a href="#" class="footer-social-link">𝕏</a>
+        <a href="#" class="footer-social-link">in</a>
+        <a href="#" class="footer-social-link">⌥</a>
+        <a href="#" class="footer-social-link">◎</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer-nav-title">Company</h4>
+      <ul class="footer-nav-list">
+        <li><button class="footer-nav-link" onclick="goTo('about')">About Us</button></li>
+        <li><button class="footer-nav-link" onclick="goTo('services')">Services</button></li>
+        <li><button class="footer-nav-link" onclick="goTo('portfolio')">Portfolio</button></li>
+        <li><button class="footer-nav-link" onclick="goTo('contact')">Contact</button></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="footer-nav-title">Services</h4>
+      <ul class="footer-nav-list">
+        <li><button class="footer-nav-link" onclick="goTo('services')">Web Development</button></li>
+        <li><button class="footer-nav-link" onclick="goTo('services')">Mobile Apps</button></li>
+        <li><button class="footer-nav-link" onclick="goTo('services')">Cybersecurity</button></li>
+        <li><button class="footer-nav-link" onclick="goTo('services')">Cloud Computing</button></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="footer-nav-title">Contact</h4>
+      <ul class="footer-contact-list">
+        <li><span>📍</span>Kampala, Uganda</li>
+        <li><a href="tel:0760964208"><span>📞</span>0760964208 / 0759877631</a></li>
+        <li><a href="mailto:okellopaulnicholas95@gmail.com"><span>✉️</span>okellopaulnicholas95@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner container">
+      <span>© <span id="year"></span> KayTechnologies. All rights reserved.</span>
+      <span>Built with ❤️ in Uganda 🇺🇬</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
