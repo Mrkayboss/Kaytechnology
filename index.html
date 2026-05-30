@@ -246,7 +246,7 @@
         <div class="card team-card"><div class="team-avatar"><img src="assets/images/CEO.jpeg" alt="Okello Paul Nicholas" /></div><div class="team-name">Okello Paul Nicholas</div><span class="team-role">CEO & Founder</span></div>
         <div class="card team-card"><div class="team-avatar"><img src="assets/images/arnold.jpeg" alt="Arnold IT Lead" /></div><div class="team-name">Arnold IT</div><span class="team-role">Lead Developer</span></div>
         <div class="card team-card"><div class="team-avatar"><img src="assets/images/obore.jpg" alt="Obore Kelly Elijah" /></div><div class="team-name">Obore Kelly Elijah</div><span class="team-role">UX/UI Lead</span></div>
-        <div class="card team-card"><div class="team-avatar"><img src="assets/images/deo.jpg" alt="Deograsius Otim" /></div><div class="team-name">Deogracious Otim </div><span class="team-role">Cybersecurity Expert</span></div>
+        <div class="card team-card"><div class="team-avatar"><img src="assets/images/deo.jpg" alt="Deograsius Otim" /></div><div class="team-name">Deograsius Otim </div><span class="team-role">Cybersecurity Expert</span></div>
       <div class="card team-card"><div class="team-avatar"><img src="assets/images/mr robert.jpeg" alt="Robert Kenyi Waya" /></div><div class="team-name">Robert Kenyi Waya</div><span class="team-role">Full Stack Developer</span></div>
     
     </div>
@@ -338,7 +338,7 @@
 </div>
 
 <!-- ══ PORTFOLIO PAGE ═════════════════════════ -->
-<div class="page" id="page-portfolio">
+<div class="page" id="page-projects">
   <section class="page-hero"><div class="page-hero-glow"></div>
     <div class="container page-hero-content">
       <span class="section-tag">See Our Recent Work</span>
@@ -413,15 +413,15 @@
         <div class="card contact-form-wrap">
           <h3 class="contact-form-heading">Send Us a Message</h3>
           <div id="form-area">
-            <form style="display:flex;flex-direction:column;gap:18px" onsubmit="submitForm(event)">
+            <form id="contact-form" style="display:flex;flex-direction:column;gap:18px" onsubmit="submitForm(event)">
               <div class="form-row">
-                <div class="form-field"><label>Full Name *</label><input type="text" placeholder="Okello Paul Nicholas" required /></div>
-                <div class="form-field"><label>Email Address *</label><input type="email" placeholder="okellopaulnicholas95@gmail.com" required /></div>
+                <div class="form-field"><label>Full Name *</label><input id="contact-name" name="name" type="text" placeholder="Okello Paul Nicholas" required /></div>
+                <div class="form-field"><label>Email Address *</label><input id="contact-email" name="email" type="email" placeholder="okellopaulnicholas95@gmail.com" required /></div>
               </div>
               <div class="form-row">
-                <div class="form-field"><label>Phone Number</label><input type="tel" placeholder="+256 7XX XXX XXX" /></div>
+                <div class="form-field"><label>Phone Number</label><input id="contact-phone" name="phone" type="tel" placeholder="+256 7XX XXX XXX" /></div>
                 <div class="form-field"><label>Service Interested In</label>
-                  <select>
+                  <select id="contact-service" name="service">
                     <option value="">Select a service…</option>
                     <option>Web Development</option><option>Mobile App Development</option>
                     <option>E-commerce</option><option>Cybersecurity</option>
@@ -430,7 +430,7 @@
                   </select>
                 </div>
               </div>
-              <div class="form-field"><label>Your Message *</label><textarea placeholder="Tell us about your project, goals, and timeline…" required></textarea></div>
+              <div class="form-field"><label>Your Message *</label><textarea id="contact-message" name="message" placeholder="Tell us about your project, goals, and timeline…" required></textarea></div>
               <button type="submit" class="btn btn-primary form-submit" id="submit-btn">Send Message →</button>
             </form>
           </div>

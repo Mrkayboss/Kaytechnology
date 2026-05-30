@@ -116,18 +116,36 @@ function setFilter(f) {
 // ── CONTACT FORM ─────────────────────────────
 function submitForm(e) {
   e.preventDefault();
+  const name = document.getElementById('contact-name').value.trim();
+  const email = document.getElementById('contact-email').value.trim();
+  const phone = document.getElementById('contact-phone').value.trim();
+  const service = document.getElementById('contact-service').value.trim();
+  const message = document.getElementById('contact-message').value.trim();
+
+  const subject = encodeURIComponent(`New KayTechnologies Message from ${name}`);
+  const body = encodeURIComponent(
+    `Name: ${name}\n` +
+    `Email: ${email}\n` +
+    `Phone: ${phone || 'N/A'}\n` +
+    `Service: ${service || 'Not specified'}\n\n` +
+    `Message:\n${message}`
+  );
+
+  const mailto = `mailto:okellopaulnicholas95@gmail.com?subject=${subject}&body=${body}`;
+  window.location.href = mailto;
+
   const btn = document.getElementById('submit-btn');
-  btn.innerHTML = '<span class="spinner"></span> Sending…';
+  btn.innerHTML = '<span class="spinner"></span> Opening Email…';
   btn.disabled = true;
   setTimeout(()=>{
     document.getElementById('form-area').innerHTML = `
       <div class="form-success">
         <div class="form-success-icon">✅</div>
-        <h4>Message Sent!</h4>
-        <p>Thank you for reaching out. Our team will get back to you within 24 hours.</p>
+        <h4>Email Draft Opened</h4>
+        <p>Please send the message from your email client to complete contact.</p>
         <button class="btn btn-outline" onclick="location.reload()">Send Another</button>
       </div>`;
-  }, 1800);
+  }, 1500);
 }
 
 // ── INIT ─────────────────────────────────────
