@@ -12,6 +12,42 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+<!-- ===== ADDED: Make about images fit like team photos ===== -->
+<style>
+  /* Make Mission/Vision & Values images fit like Team photos */
+  .mv-image,
+  .value-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+    background: #1a1e2a;
+    flex-shrink: 0;
+    border: 2px solid rgba(0, 188, 255, 0.15);
+  }
+  .mv-image img,
+  .value-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Keep the card layout clean */
+  .mv-card,
+  .values-grid .card {
+    text-align: center;
+  }
+  .values-grid .card .value-title {
+    margin-top: 0;
+  }
+</style>
+
 </head>
 <body>
 
@@ -125,8 +161,8 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item"><span class="stat-value">20+</span><span class="stat-label">Projects Delivered</span></div>
-        <div class="stat-item"><span class="stat-value">8+</span><span class="stat-label">Happy Clients</span></div>
-        <div class="stat-item"><span class="stat-value">8+</span><span class="stat-label">Years Experience</span></div>
+        <div class="stat-item"><span class="stat-value">20+</span><span class="stat-label">Happy Clients</span></div>
+        <div class="stat-item"><span class="stat-value">3+</span><span class="stat-label">Years Experience</span></div>
         <div class="stat-item"><span class="stat-value">24/7</span><span class="stat-label">Support</span></div>
       </div>
     </div>
@@ -215,42 +251,109 @@
           <div class="about-stats-row">
             <div class="about-stat"><span class="about-stat-val">2023</span><span class="about-stat-lbl">Founded</span></div>
             <div class="about-stat"><span class="about-stat-val">20+</span><span class="about-stat-lbl">Projects</span></div>
-            <div class="about-stat"><span class="about-stat-val">4+</span><span class="about-stat-lbl">Team</span></div>
+            <div class="about-stat"><span class="about-stat-val">5+</span><span class="about-stat-lbl">Team</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section-no-pad-top">
-    <div class="container">
-      <div class="mv-grid">
-        <div class="card mv-card"><div class="mv-card-icon">🎯</div><h3 class="mv-card-heading">Our Mission</h3><p>To empower businesses and individuals across Africa with innovative, reliable, and affordable technology solutions that drive real-world impact.</p></div>
-        <div class="card mv-card"><div class="mv-card-icon">🌟</div><h3 class="mv-card-heading">Our Vision</h3><p>To be Africa's most trusted technology partner by 2030 — known for cutting-edge solutions that transform industries and put African innovation on the global map.</p></div>
+  <!-- ===== MISSION & VISION ===== -->
+<section class="section section-no-pad-top">
+  <div class="container">
+    <div class="mv-grid">
+      
+      <!-- Mission Card -->
+      <div class="card mv-card">
+        <div class="mv-image">
+          <img src="/assets/icons/Our Mission_.jpg" alt="Our Mission">
+        </div>
+        <h3 class="mv-card-heading">Our Mission</h3>
+        <p>To empower businesses and individuals across Africa with innovative, reliable, and affordable technology solutions that drive real-world impact.</p>
       </div>
-    </div>
-  </section>
 
-  <section class="section section-no-pad-top">
-    <div class="container">
-      <div class="section-header"><span class="section-tag">Core Values</span><h2 class="section-title">What We <span class="highlight">Stand For</span></h2></div>
-      <div class="values-grid">
-        <div class="card"><div class="value-icon">🚀</div><div class="value-title">Innovation First</div><p class="value-text">We stay ahead of the curve, adopting emerging technologies to give clients a competitive edge.</p></div>
-        <div class="card"><div class="value-icon">🎯</div><div class="value-title">Client-Centric</div><p class="value-text">Your success is our success. Every decision is driven by your goals and desired outcomes.</p></div>
-        <div class="card"><div class="value-icon">💡</div><div class="value-title">Creative Thinking</div><p class="value-text">We approach every challenge with fresh eyes, crafting elegant solutions to complex problems.</p></div>
-        <div class="card"><div class="value-icon">🛡️</div><div class="value-title">Integrity</div><p class="value-text">We operate with full transparency, honesty, and accountability in every engagement.</p></div>
-        <div class="card"><div class="value-icon">🌍</div><div class="value-title">African Pride</div><p class="value-text">Built in Uganda. Serving Africa. Competing Globally. We are proof of African excellence.</p></div>
-        <div class="card"><div class="value-icon">⚡</div><div class="value-title">Speed & Quality</div><p class="value-text">Agile by nature — we deliver fast without ever compromising on standards or reliability.</p></div>
+      <!-- Vision Card -->
+      <div class="card mv-card">
+        <div class="mv-image">
+          <img src="/assets/icons/Our Vision_.jpg" alt="Our Vision">
+        </div>
+        <h3 class="mv-card-heading">Our Vision</h3>
+        <p>To be Africa's most trusted technology partner by 2030  known for cutting-edge solutions that transform industries and put African innovation on the global map.</p>
       </div>
+
     </div>
+  </div>
+</section>
+
+<!-- ===== CORE VALUES ===== -->
+<section class="section section-no-pad-top">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Core Values</span>
+      <h2 class="section-title">What We <span class="highlight">Stand For</span></h2>
+    </div>
+    <div class="values-grid">
+
+      <div class="card">
+        <div class="value-image">
+          <img src="/assets/icons/innovation Business Concept.jpg" alt="Innovation First">
+        </div>
+        <div class="value-title">Innovation First</div>
+        <p class="value-text">We stay ahead of the curve, adopting emerging technologies to give clients a competitive edge.</p>
+      </div>
+
+      <div class="card">
+        <div class="value-image">
+          <img src="/assets/icons/CLIENT CENTRIC.jpg" alt="Client-Centric">
+        </div>
+        <div class="value-title">Client-Centric</div>
+        <p class="value-text">Your success is our success. Every decision is driven by your goals and desired outcomes.</p>
+      </div>
+
+      <div class="card">
+        <div class="value-image">
+          <img src="/assets/icons/THINKING.jpg" alt="Creative Thinking">
+        </div>
+        <div class="value-title">Creative Thinking</div>
+        <p class="value-text">We approach every challenge with fresh eyes, crafting elegant solutions to complex problems.</p>
+      </div>
+
+      <div class="card">
+        <div class="value-image">
+          <img src="/assets/icons/INTERGITY.jpg" alt="Integrity">
+        </div>
+        <div class="value-title">Integrity</div>
+        <p class="value-text">We operate with full transparency, honesty, and accountability in every engagement.</p>
+      </div>
+
+      <div class="card">
+        <div class="value-image">
+          <img src="/assets/icons/Africa.jpg" alt="African Pride">
+        </div>
+        <div class="value-title">African Pride</div>
+        <p class="value-text">Built in Uganda. Serving Africa. Competing Globally. We are proof of African excellence.</p>
+      </div>
+
+      <div class="card">
+        <div class="value-image">
+          <img src="/assets/icons/SPEED AND QUALITY.jpg" alt="Speed & Quality">
+        </div>
+        <div class="value-title">Speed & Quality</div>
+        <p class="value-text">Agile by nature  we deliver fast without ever compromising on standards or reliability.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+</section>
+</section>
   </section>
 
   <section class="section section-no-pad-top">
     <div class="container">
       <div class="section-header"><span class="section-tag">The Team</span><h2 class="section-title">Meet the <span class="highlight">Experts</span></h2></div>
       <div class="team-grid">
-        <div class="card team-card"><div class="team-avatar"><img src="assets/images/CEO.jpeg" alt="Okello Paul Nicholas" /></div><div class="team-name">Okello Paul Nicholas</div><span class="team-role">CEO, Founder & Full Stack Developer</span></div>
-        <div class="card team-card"><div class="team-avatar"><img src="assets/images/arnold.jpeg" alt="Arnold IT Lead" /></div><div class="team-name">Arnold IT</div><span class="team-role">Lead Developer</span></div>
+        <div class="card team-card"><div class="team-avatar"><img src="assets/images/CEO.jpeg" alt="Okello Paul Nicholas" /></div><div class="team-name">Okello Paul Nicholas</div><span class="team-role">CEO & Full Stack Developer</span></div>
         <div class="card team-card"><div class="team-avatar"><img src="assets/images/obore.jpg" alt="Obore Kelly Elijah" /></div><div class="team-name">Obore Kelly Elijah</div><span class="team-role">UX/UI Lead</span></div>
         <div class="card team-card"><div class="team-avatar"><img src="assets/images/deo.jpg" alt="Deograsius Obalim" /></div><div class="team-name">Deograsius Obalim</div><span class="team-role">Cybersecurity Expert</span></div>
       <div class="card team-card"><div class="team-avatar"><img src="assets/images/mr robert.jpeg" alt="Robert Kenyi Waya" /></div><div class="team-name">Robert Kenyi Waya</div><span class="team-role">Full Stack Developer</span></div>
